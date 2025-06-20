@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,6 +100,39 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }
+
+@layer components {
+  .trip-card {
+    @apply bg-white rounded-xl shadow-card hover:shadow-card-hover transition-all duration-300 border border-gray-100;
+  }
+  
+  .trip-button {
+    @apply px-6 py-3 rounded-xl font-medium transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+  
+  .confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #00A651;
+  }
+  
+  .confetti-piece:nth-child(odd) {
+    background: #FF5B00;
+    border-radius: 50%;
+  }
+  
+  .confetti-piece:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .confetti-piece:nth-child(2) { left: 20%; animation-delay: 0.5s; }
+  .confetti-piece:nth-child(3) { left: 30%; animation-delay: 1s; }
+  .confetti-piece:nth-child(4) { left: 40%; animation-delay: 1.5s; }
+  .confetti-piece:nth-child(5) { left: 50%; animation-delay: 2s; }
+  .confetti-piece:nth-child(6) { left: 60%; animation-delay: 0.3s; }
+  .confetti-piece:nth-child(7) { left: 70%; animation-delay: 0.8s; }
+  .confetti-piece:nth-child(8) { left: 80%; animation-delay: 1.3s; }
+  .confetti-piece:nth-child(9) { left: 90%; animation-delay: 1.8s; }
+}
+</layer>
